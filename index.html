@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Kacper Szczygielski</title>
+		<link rel="stylesheet" href="./styles/style.css">
+	</head>
+	<body>
+		<header class="header" id="Home">
+         
+        </header>
+        <nav class="nav">
+            <div class="container"></div>
+                <ul>
+                    <li><a href="#Home">Strona Główna</a></li>
+                    <li><a href="#o-mnie">O mnie</a></li>
+                    <li><a href="#doswiadczenie">Doświadczenie</a></li>
+					<li><a href="#kontakt">Kontakt</a></li>
+					<li><select name="form" onchange="location = this.value;">
+						<option value="index.html">PL</option>
+						<option value="index-en.html">ENG</option>
+					</select></li>
+                </ul>
+            </div>
+        </nav>
+		<section class="section" id="o-mnie">
+			<div class="container">
+				<h2>O mnie</h2>
+				<p>Obecnie studiuje informatykę na uczelni SGGW.</p>
+				<p>W wolnych chwilach staram się zdobywać wiedzę poprzez kursy na stronie www.udemy.com</p> 
+				<p>Chciałbym podjąć pracę jako programista, aby móc rozwijać swoje umiejętności programistyczne i zdobywać doświadczenie w projektach komercyjnych.</p>
+				<p>Obecny cel to ukończenię studjów oraz dołączenie zespołu programistów.</p>
+
+
+			</div>
+		</section>
+		<section class="section" id="doswiadczenie">
+			<div class="container">
+				<h2>Doświadczenie</h2>
+				<p>09/2017 - 01/2018 pracowałem jako Konsultant ds. telefonicznej obsługi klienta gdzie zajmowałem się obsługa telefoniczna osób posiadających ubezpieczenie na życie.</p>
+				<p>01/2018 - 08/2018 pracowałem jako Wsparcie Techniczne Dell gdzie zajmowałem się przeprowadzanie zdalnej diagnostyki urządzeń. Zlecenie wykonania naprawy u użytkownika.</p>
+				<p>09.2018 - obecnie pracuje jako IT Helpdesk w banku.</p>
+			</div>
+		</section>
+		<section class="section" id="kontakt">
+			<div class="container">
+				<h2>Kontakt</h2>
+				<p>Imię:<input type="text" id="Imie" /></br></p>
+				<p>Email:<input type="text" id="email"/></br></p>
+				<p><textarea>Text</textarea></br></p>
+				</p><input type="submit" value="Wyślij" id="Wyślij" onclick="sprawdzenieImie()"/></p>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; Kacper Szczygielski, 2020.</p>
+			</div>
+		</footer>
+		<script src="jquery.js"></script>
+		<script src="stickyfill.js"></script>
+		<script>
+			$('.nav').Stickyfill();
+
+			$(function() {
+			  $('a[href*="#"]:not([href="#"])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').stop().animate({
+			          scrollTop: target.offset().top - 70
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+		</script>
+	</body>
+</html>

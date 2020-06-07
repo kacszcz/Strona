@@ -1,0 +1,36 @@
+nav{
+    position: sticky;
+	top: 0;
+    line-height: 50px;
+    background: $navBtm;
+    text-align: right;
+    @include body.scss;
+
+    p{
+        text-align: center;
+    }
+
+    
+    ul{
+        display: flex;
+		justify-content: space-between;
+		list-style: none;
+    }
+
+    li{
+        width: 100%;
+        
+    }
+
+    a{
+        display: block;
+		text-align: center;
+		color: $textColor;
+        text-decoration: none;
+        
+        
+    }
+    &:hover, &:focus {
+        background: #404142;
+    }
+}
